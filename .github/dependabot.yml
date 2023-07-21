@@ -1,0 +1,18 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    versioning-strategy: increase
+    schedule:
+      interval: "daily"
+      time: "08:00"
+      timezone: "America/New_York"
+    open-pull-requests-limit: 20
+    groups:
+      next:
+        patterns:
+          - "next"
+          - "next*"
+          - "@next/bundle-analyzer"
+          - "@next/env"
+          - "eslint-config-next"
